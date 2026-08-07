@@ -1,2 +1,21 @@
-.history/
+# VS Code
 .vscode/
+
+# VS Code Local History
+.history/
+
+# Build files
+*.exe
+*.out
+*.o
+*.obj
+
+# CMake
+build/
+cmake-build-*/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
