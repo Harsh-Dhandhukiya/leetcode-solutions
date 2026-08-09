@@ -2,10 +2,6 @@
 
 **Difficulty:** Medium
 
-**Topics:** Linked List, Math
-
-**Companies:** Frequently Asked
-
 **Problem Link:** [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/add-two-numbers/)
 
 ---
@@ -134,38 +130,6 @@ Therefore:
 Result = [7,0,8]
 ```
 
----
-
-## Algorithm
-
-1. Create a dummy node to simplify construction of the result list.
-2. Maintain a pointer `current` to the last node in the result.
-3. Initialize `carry = 0`.
-4. Traverse both linked lists while at least one list still has a node or `carry` is non-zero.
-5. Get the current values from `l1` and `l2`. Use `0` if a list has already ended.
-6. Calculate:
-
-   ```text
-   sum = value1 + value2 + carry
-   ```
-
-7. Create a new node with:
-
-   ```text
-   sum % 10
-   ```
-
-8. Update the carry:
-
-   ```text
-   carry = sum / 10
-   ```
-
-9. Move `l1`, `l2`, and `current` to the next nodes.
-10. Return `dummy.next`.
-
----
-
 ## Complexity
 
 Let `n` and `m` be the lengths of the two linked lists.
@@ -183,110 +147,3 @@ We visit each node in both linked lists at most once.
 ```text
 O(max(n, m))
 ```
-
-The result linked list contains at most `max(n, m) + 1` nodes.
-
----
-
-## Key Idea
-
-The most important observation is that the digits are already stored in **reverse order**.
-
-For example:
-
-```text
-Number: 342
-Linked List: [2,4,3]
-```
-
-The first node contains the **least significant digit**.
-
-This means we can perform addition exactly like normal arithmetic without reversing either linked list.
-
-```text
-    2  → 4 → 3
-    5  → 6 → 4
-    ------------
-    7  → 0 → 8
-```
-
-The `carry` is passed to the next digit whenever the sum is greater than or equal to `10`.
-
----
-
-## Edge Cases
-
-### Different Lengths
-
-The two linked lists can have different lengths.
-
-```text
-l1 = [9,9]
-l2 = [1]
-```
-
-The calculation becomes:
-
-```text
-9 + 1 = 10 → 0, carry 1
-9 + 0 + 1 = 10 → 0, carry 1
-0 + 0 + 1 = 1
-```
-
-Result:
-
-```text
-[0,0,1]
-```
-
----
-
-### Remaining Carry
-
-There may be a carry after both lists have ended.
-
-For example:
-
-```text
-l1 = [9]
-l2 = [1]
-```
-
-```text
-9 + 1 = 10
-```
-
-Result:
-
-```text
-[0,1]
-```
-
----
-
-### Zero
-
-If both numbers are zero:
-
-```text
-l1 = [0]
-l2 = [0]
-```
-
-The result is:
-
-```text
-[0]
-```
-
----
-
-## Summary
-
-The solution uses the standard addition technique with a **carry** while traversing both linked lists simultaneously.
-
-Because the linked lists store digits in reverse order, the least significant digit is available first, making the addition straightforward.
-
-**Time:** `O(max(n, m))`
-
-**Space:** `O(max(n, m))`
