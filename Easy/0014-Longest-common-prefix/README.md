@@ -1,7 +1,7 @@
 # 14. Longest Common Prefix
 
 - **Difficulty:** Easy
-- **Problem Link:** [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/longest-common-prefix/description/)
+- **Problem Link:** https://leetcode.com/problems/longest-common-prefix/description/
 
 Write a function to find the longest common prefix string amongst an array of strings.
 
