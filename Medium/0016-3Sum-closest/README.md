@@ -77,7 +77,3 @@ A common optimal approach is:
 
 - **Time:** `O(n²)`
 - **Space:** `O(1)` auxiliary space, excluding the sorting implementation.
-
-```
-
-```
