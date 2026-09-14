@@ -17,29 +17,6 @@ To be accepted, you need to:
 - The remaining elements of `nums` and the size of `nums` are not important.
 - Return `k`.
 
-## Custom Judge
-
-The judge will test your solution with code similar to:
-
-```java id="5z9h6p"
-int[] nums = [...]; // Input array
-int val = ...;      // Value to remove
-int[] expectedNums = [...]; // Expected answer with correct length
-                               // It is sorted with no values equaling val.
-
-int k = removeElement(nums, val); // Calls your implementation
-
-assert k == expectedNums.length;
-
-sort(nums, 0, k); // Sort the first k elements of nums
-
-for (int i = 0; i < actualLength; i++) {
-    assert nums[i] == expectedNums[i];
-}
-```
-
-If all assertions pass, then your solution will be accepted.
-
 ## Examples
 
 ### Example 1
