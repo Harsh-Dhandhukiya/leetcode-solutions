@@ -3,8 +3,6 @@
 - **Difficulty:** Medium
 - **Problem Link:** https://leetcode.com/problems/merge-intervals/
 
-**Difficulty:** Medium
-
 ## Problem Description
 
 Given an array of intervals where `intervals[i] = [startᵢ, endᵢ]`, merge all overlapping intervals and return an array of the non-overlapping intervals that cover all the intervals in the input.
