@@ -1,6 +1,7 @@
 # 86. Partition List
 
-**Difficulty:** Medium
+- **Difficulty:** Medium
+- **Problem Link:** https://leetcode.com/problems/partition-list/
 
 ## Problem Description
 
